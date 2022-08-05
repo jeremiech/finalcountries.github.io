@@ -1,5 +1,7 @@
 import React,{useState,useEffect} from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { RiDeleteBin3Fill} from "react-icons/ri";
+
 
 
 const url = 'https://restcountries.com/v2/all'
@@ -21,7 +23,13 @@ const Countries = () =>{
       fetchCountryData()
     }, [])
 
+const remoiveCountr=(numericCode)=>{
+    const newCountry=countries.filter((country)=>
+        country.numericCode!==numericCode
 
+    )
+    setCountries(newCountry)
+}
 
     
     return (
@@ -47,13 +55,19 @@ const Countries = () =>{
                     <h4>Population: <span>{population}</span></h4>
                     <h4>Region: <span>{region}</span></h4>
                     <h4>Capital: <span>{capital}</span></h4>
-                    {/* <Link to={`/grid/${name}`}>
+                    <div className='buttons'>
+                    <Link to={`countries/${name}`} className="btn">
                         Learn more
-                    </Link> */}
+                    </Link>
+                    <button className='btn' onClick={()=>remoiveCountr(numericCode)} ><RiDeleteBin3Fill style={{
+                        fontSize:"20px",
+                        background:"transparent"
+                    }} /></button>
+                    </div>
                     </div>
                 </div>
+                
             </article>
-        
     })}
     </section>
     

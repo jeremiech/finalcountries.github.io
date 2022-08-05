@@ -1,26 +1,21 @@
-import React from 'react'
-// import { render } from 'react-dom';
-import {BrowserRouter as Router,Route} from 'react-router-dom'
-import Countries from './Components/Countries'
-import Header from './Components/Header';
-import Filter from './Components/Filter';
-// import Country from './Components/Country';
+import React from "react";
+import Header from "./Components/Header";
+import {BrowserRouter as Router,Routes,Route, BrowserRouter} from 'react-router-dom'
+import Count from "./Components/Count";
+import Country from "./Components/Country";
+// import Countries from "./Components/Countries";
+// import Filter from "./Components/Filter"
+
 
 function App() {
-  
   return (
-    <Router>
-      {/* <Route/> */}
-      <Header/>
-      {/* <Route exact path="/"> */}
-        <Filter/>
-        <Countries />
-      {/* </Route> */}
-      {/* <Route path="/grid/:name" children=
-      {<Country />}></Route> */}
-      
-  </Router>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Count />}></Route>
+        <Route path="/countries/:name" element={<Country />}></Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

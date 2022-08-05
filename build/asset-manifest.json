@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/jeremiech/finalcountries.github.io.git/static/css/main.761f38cc.css",
+    "main.js": "/jeremiech/finalcountries.github.io.git/static/js/main.387463d6.js",
+    "index.html": "/jeremiech/finalcountries.github.io.git/index.html",
+    "main.761f38cc.css.map": "/jeremiech/finalcountries.github.io.git/static/css/main.761f38cc.css.map",
+    "main.387463d6.js.map": "/jeremiech/finalcountries.github.io.git/static/js/main.387463d6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.761f38cc.css",
+    "static/js/main.387463d6.js"
+  ]
+}

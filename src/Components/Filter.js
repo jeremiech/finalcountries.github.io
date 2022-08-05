@@ -8,7 +8,7 @@ const Filter = () => {
             type="search" 
             name="search" 
             id="search" 
-            placeholder="Searc for a country" />
+            placeholder="Search for a country" />
 
         </form>
 
